@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="flash-messages">
+      {% for message in messages %}
+        <div class="flash-message">
+          {{ message }}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+  {% endwith %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Architect Website</title>
+  <link href="/static/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,400;0,600;1,300;1,400;1,600&family=Muli:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+  <div class="spinner-container">
+    <div class="circles">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="hamburger-menu">
+      <div class="line line-1"></div>
+      <div class="line line-2"></div>
+      <div class="line line-3"></div>
+      <span>Close</span>
+    </div>
+    <header class="header">
+      <div class="img-wrapper">
+        <img src="static/images/bg.jpg" />
+      </div>
+      <div class="banner">
+        <h1>UrbanForm Innovations</h1>
+        <p>
+         Experience spaces reimagined, where creativity meets functionality.
+        </p>
+        <a href="#about-us">
+        <button>Discover now</button>
+      </div>
+    </header>
+
+    <section class="sidebar">
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="#" class="menu-link" data-content="Home">Home</a>
+        </li>
+        <li class="menu-item">
+          <a href="#about-us" class="menu-link" data-content="About Us">About Us</a>
+        </li>
+        <li class="menu-item">
+          <a href="#our-team" class="menu-link" data-content="Team">Team</a>
+        </li>
+        <li class="menu-item">
+          <a href="#contact" class="menu-link" data-content="Pricing">Pricing</a>
+        </li>
+        <li class="menu-item">
+          <a href="#contact" class="menu-link" data-content="Contact">Contact</a>
+        </li>
+      </ul>
+      <div class="social-media">
+        <a href="https://www.facebook.com/" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com/" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </section>
+
+    <section class="about-us" id="about-us">
+      <div class="section-header">
+        <h1 class="section-heading">About Us</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="services">
+        <div class="service">
+          <div class="service-header">
+            <i class="fas fa-pen-nib"></i>
+            <h3>Interior</h3>
+          </div>
+          <p class="service-text">
+            Explore the art of interior design with our expert team.
+            We create inviting, functional, and beautiful spaces for you
+            to enjoy. Let us turn your interior dreams into a reality of comfort and style.
+          </p>
+        </div>
+        <div class="service">
+          <div class="service-header">
+            <i class="fas fa-paint-roller"></i>
+            <h3>Exterior</h3>
+          </div>
+          <p class="service-text">
+            Elevate your outdoor spaces with our exterior design solutions.
+            We turn your dreams of the perfect outdoor environment into reality.
+            Whether it's a cozy patio or a stunning garden, we've got you covered.
+
+          </p>
+        </div>
+        <div class="service">
+          <div class="service-header">
+            <i class="fas fa-pencil-alt"></i>
+            <h3>Design</h3>
+          </div>
+          <p class="service-text">
+            Unleash creativity with our design services. We bring innovative
+            and stylish design concepts to life, tailored to your unique vision.
+            Our designers are dedicated to making your space truly exceptional.
+
+          </p>
+        </div>
+        <div class="service">
+          <div class="service-header">
+            <i class="fas fa-paint-brush"></i>
+            <h3>Decoration</h3>
+          </div>
+          <p class="service-text">
+            Experience the power of thoughtful decoration. Our team adds
+            the finishing touches that make your space truly special.
+            Let us help you create an atmosphere that reflects your personality and style.
+          </p>
+        </div>
+        <div class="service">
+          <div class="service-header">
+            <i class="fas fa-ruler-combined"></i>
+            <h3>Planning</h3>
+          </div>
+          <p class="service-text">
+            Plan for success with our meticulous planning. We ensure every
+           detail is considered for a seamless and efficient process.
+           Our planning expertise guarantees your project's success from start to finish.
+
+          </p>
+        </div>
+        <div class="service">
+          <div class="service-header">
+            <i class="far fa-building"></i>
+            <h3>Execution</h3>
+          </div>
+          <p class="service-text">
+            Watch your vision come to life with our expert execution.
+            We turn plans into reality with precision and skill. Our
+            dedicated team is committed to making your dreams a tangible reality.
+
+          </p>
+        </div>
+        <div class="about-us-img-wrapper">
+          <img src="static/images/house.png" />
+        </div>
+      </div>
+    </section>
+
+    <section class="team" id="our-team">
+      <div class="section-header">
+        <h1 class="section-heading">Our Team</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="cards-wrapper">
+        <div class="card" data-tilt>
+          <div class="card-img-wrapper">
+            <img src="static/images/person-1.jpg" alt="CEO" />
+          </div>
+          <div class="card-info">
+            <h2>David Malan</h2>
+            <h3>CEO</h3>
+            <p>
+              "We're dedicated to crafting sustainable architectural wonders that inspire!"
+            </p>
+            <button><a href="#contact">Know More</a></button>
+          </div>
+        </div>
+        <div class="card" data-tilt>
+          <div class="card-img-wrapper">
+            <img src="static/images/person-2.jpg" alt="Designer" />
+          </div>
+          <div class="card-info">
+            <h2>Kat Dennings</h2>
+            <h3>Designer</h3>
+            <p>
+              "We design with a purpose – your inspirations fuel our creations.
+               Thank you for being a part of our design journey!"
+            </p>
+            <button><a href="#contact">Know More</a></button>
+          </div>
+        </div>
+        <div class="card" data-tilt>
+          <div class="card-img-wrapper">
+            <img src="static/images/person-3.jpg" alt="Architect" />
+          </div>
+          <div class="card-info">
+            <h2>Alex Furoshi</h2>
+            <h3>Architect</h3>
+            <p>
+              "Architecture is the poetry of spaces, the art of creating dreams you can inhabit.
+               Welcome to a world where imagination takes form!"
+            </p>
+            <button><a href="#contact">Know More</a></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact"> <!-- Add an id attribute to the "Contact" section -->
+      <div class="contact-wrapper">
+        <div class="contact-left"></div>
+        <div class="contact-right">
+          <h1 class="contact-heading">Contact</h1>
+          <form action="/submit_contact" method="POST">
+            <div class="input-group">
+              <input type="text" name="full_name" class="field" required />
+              <label class="input-label">Full Name</label>
+            </div>
+            <div class="input-group">
+              <input type="email" name="email" class="field" required />
+              <label class="input-label">Email</label>
+            </div>
+            <div class="input-group">
+              <textarea name="message" class="field" required></textarea>
+              <label class="message">Message</label>
+            </div>
+            <input type="submit" class="submit-btn" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p class="copyright">
+          Copyright &copy; 2023, Irfan Younis - All Rights Reserved- This is demo website
+        </p>
+        <div class="social-list">
+          <a href="https://www.facebook.com/your-facebook-profile" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/your-instagram-profile" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com/your-twitter-profile" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+
+    </footer>
+    <a href="#" class="scroll-btn">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+  </div>
+
+  <script src="static/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="static/tilt.js"></script>
+</body>
+</html>
